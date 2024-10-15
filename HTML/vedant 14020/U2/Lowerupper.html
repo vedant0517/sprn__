@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>String Cases</title>
+<script type=text/javascript>
+function uppercase() 
+{
+A=myf.mystring1.value
+document.write("The string in upper case is " + A.toUpperCase()) 
+}
+function lowercase() 
+{
+A=myf.mystring1.value
+document.write("The string in lower case is " + A.toLowerCase()) 
+}
+</script>
+</head>
+<body>
+<form name=myf>
+Enter a String:<input type=text name=mystring1>
+<br>
+<input type=button value=Touppercase onclick=uppercase()>
+<br>
+<input type=button value=Tolowercase onclick=lowercase()>
+</form>
+</body>
+</html>

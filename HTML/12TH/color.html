@@ -1,0 +1,28 @@
+<html><head><title> SOP1 Part-1 </title>
+<html>
+<head>
+  <title> SOP1 Part-1 </title>
+  <script type="text/javascript"> 
+    function rang() {
+      window.setTimeout("document.bgColor='Yellow'", 2000) 
+      window.setTimeout("document.bgColor='Red'", 4000) 
+      window.setTimeout("document.bgColor='Cyan'", 6000)
+      window.setTimeout("document.bgColor='Pink'", 8000) 
+      window.setTimeout("document.bgColor='Green'", 10000)
+      window.setTimeout("document.bgColor='Blue'", 12000)
+      window.setTimeout("document.bgColor='Brown'", 14000)
+      window.setTimeout("rang()", 16000)
+    }
+    function msg() {
+      window.status = "thank you"
+    }
+  </script>
+</head>
+<body>
+  <form>
+    move mouse pointer on button to change color
+    <button onmouseover="rang()">change color</button>
+    <button onclick="msg()">show</button>
+  </form>
+</body>
+</html>

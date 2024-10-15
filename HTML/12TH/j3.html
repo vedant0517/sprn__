@@ -1,0 +1,26 @@
+<html>
+<head><title>java 2</title>
+<script type=text/javascript>
+
+function pali()
+{
+rev=""
+ms=myf.string.value.toLowerCase()
+A=ms.length
+for(i=A-1;i>=0;i--)
+{
+onech=ms.charAt(i)
+rev=rev+onech
+}
+if(ms==rev)
+document.write("Palindrome string:"+ms)
+else
+document.write("Not Palindrome string:"+ms)
+}
+</script>
+</head><body>
+<form name=myf>
+Enter string to check it is palindrome or not:
+<input type=text name=string>
+<input type=button value="check" onclick=pali()>
+</form></body></html>

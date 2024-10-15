@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>SOP3count</title>
+<script type=text/javascript>
+function cv()
+{
+ms=myf.mystring.value
+A=ms.toLowerCase()
+count=0
+for(i=0;i<=A.length;i++)
+{onech=A.charAt(i)
+if(onech=='a'||onech=='e'||onech=='i'||onech=='o'||onech=='u')
+count=count+1
+}
+document.write("number of vowels are:"+count)
+}
+</script></head>
+<body>
+<form name=myf>
+Enter string to count vowel:
+<input type=text name=mystring><br>
+<input type=button value="count vowel" onclick=cv()>
+</form></body></html>

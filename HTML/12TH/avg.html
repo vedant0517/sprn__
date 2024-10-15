@@ -1,0 +1,59 @@
+<html><head>
+<title>jssop6</title>
+<script type=text/javascript> 
+function showgrade()
+{
+a=parseInt(mform.eng.value)
+b=parseInt(mform.phy.value) 
+c=parseInt(mform.chem.value)
+d=parseInt(mform.math.value)
+e=parseInt(mform.it.value)
+f=parseInt(mform.geo.value) 
+
+avg1=(a+b+c+d+e+f)/6
+
+mform.avg.value=avg1
+
+if(avg1>=91&&avg1<=100)
+mform.grade.value="outstanding,Grade A"
+
+else
+
+if(avg1>=81&&avg1<=90) 
+mform.grade.value="Excellent, Grade B"
+
+else
+
+if(avg1>=71&&avg1<=80)
+mform.grade.value="Good,Grade C"
+
+else
+
+if (avg1>=61&&avg1<=70)
+mform.grade.value="Satisfied,Grade D"
+
+else
+
+if(avg1>=35&&avg1<=60)
+mform.grade.value="grade E"
+
+else
+
+mform.grade.value="No grade alloted less than 35%"
+}
+</script></head>
+<body>
+<form name=mform> 
+Enter english marks: <input type=number name=eng><br>
+Enter physics marks:<input type=number name=phy><br> 
+Enter chemistry marks:<input type=number name=chem><br>
+Enter maths marks:<input type=number name=math><br>
+Enter It marks:<input type=number name=it><br>
+Enter geography marks:<input type=number name=geo><br>
+<input type=button value=ShowGrade onClick=showgrade()>
+<br>
+<br>
+Average:<input type=text name=avg disabled>
+<br>
+Grade:<input type=text name=grade size=30 disabled>
+</form></body></html>

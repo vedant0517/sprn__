@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Sop 3 JAVasript Count vowels</title>
+<script type="text/javascript">
+	function count()
+	{
+		var i,ch,str,counter=0;
+		str=form1.text1.value;
+		for(i=0;i<str.length;i++)
+		{
+			ch=str.charAt(i);
+			if(ch=='A'||ch=='a'||ch=='e'||ch=='E'||ch=='i'||ch=='I'||ch=='o'||ch=='O'||ch=='u'||ch=='U')
+				counter++;
+		}
+		alert("Number of Vowels in Entered String is:"+counter);
+	}
+</script>
+
+</head>
+<body>
+<form name="form1">
+	<h1>Enter the String whose vowel isto be counted</h1>
+	<input type=text name=text1> 
+	<input type=button name="checkvowel" value="Click to count" onclick="count()">
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head><title>SOP4</title>
+<script type=text/javascript> 
+function string()
+{
+rev=""
+ms=myf.mystring.value.toLowerCase()
+A=ms.length
+for(i=A-1;i>=0;i--)
+{
+onech=ms.charAt(i)
+rev=rev+onech
+}
+if(ms==rev) 
+document.write("Palindrome string:"+ms)
+else
+document.write("not palindrome:"+ms)
+}
+</script></head>
+<body>
+<form name=myf>
+Enter string to check it is palindrome or not: 
+<input type=text name=mystring><br>
+<input type=button value="check" onclick=string()>
+</form></body></html>
+

@@ -1,0 +1,31 @@
+<html>
+<head><title>java 2</title>
+<script type=text/javascript>
+
+function temp()
+{
+tempcelsius=myf.cel.value
+tempfahrenheit=myf.f.value
+
+outputfahrenheit=(tempcelsius*1.8)+32
+myf.cf.value=outputfahrenheit
+
+outputcelcius=(tempfahrenheit-32)*5/9
+myf.fc.value=outputcelcius
+}
+</script>
+</head><body>
+<form name=myf>
+Enter temperature in celsius:
+<input type=text name=cel>
+=<input type=text name=cf disabled size=5 required>
+<sup>o</sup>F
+<br>
+Enter temperature in fahrenheit:
+<input type=text name=f>
+=<input type=text name=fc disabled size=5 required>
+<sup>o</sup>C			
+<br>
+<input type=button value="convert" onclick=temp()>
+<br><input type=reset value=clear>
+</form></body></html>
