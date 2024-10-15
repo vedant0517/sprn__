@@ -7,7 +7,7 @@ public class array2D {
         int numbers[][]=new int[rows][cols];
        
       
-        //input.
+        //input
          //rows
         for(int i=0;i<rows;i++){
             //columns
