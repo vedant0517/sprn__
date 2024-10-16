@@ -19,7 +19,7 @@ public class fact {
         int n=sc.nextInt();
         calculatetFact(n);
        
-        sc.close();
+        sc.close(); 
         }
     
 }
