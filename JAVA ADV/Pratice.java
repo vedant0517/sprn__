@@ -25,11 +25,13 @@
 
 //     }
 
-    import java.util.*;
 public class Pratice{
+    public static void printHello(){
+        System.out.println("Hello World");
+    
+    }
     public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        
+        printHello();
         }
 
     }
