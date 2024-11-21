@@ -20,7 +20,7 @@ public class week {
                 break;
             default:{System.out.println("Invalid Input ");}
                 break;
-        }
+        }sc.close();
     }
     
 }

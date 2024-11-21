@@ -1,4 +1,5 @@
-public class bino{
+public class bino
+{
 
    public static int calculateFact(int f){
        //loop

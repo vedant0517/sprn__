@@ -19,7 +19,7 @@ public class sumoddeven {
         }while(choice==1);
         System.out.println("Sum of odd number is:"+ oddsum);
         System.out.println("Sum of even number is:"+ evensum);
-        
+        sc.close();
     }
 
 }
