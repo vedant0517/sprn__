@@ -1,5 +1,5 @@
 // package arrays;
-import java.util.*;
+//import java.util.*;
 public class gratest {
     // public static int great(int num[]){
     //     int max=num[0];

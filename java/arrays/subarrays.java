@@ -2,10 +2,10 @@ public class subarrays {
     public static void sub(int num[]){
         int ts=0;
         for(int i=0;i<num.length;i++){
-            int start=i;
+            // int start=i;
             for(int j=i;j<num.length;j++){
-                int end=j;
-                for(int k=start;k<=end;k++){
+                //int end=j;
+                for(int k=i;k<=j;k++){
                     System.out.print(num[k]+" "); //subarrays
                 }ts++;
                 System.out.println();
