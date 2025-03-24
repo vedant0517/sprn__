@@ -1,13 +1,13 @@
 public class AssignmentRecursion { 
-    public static void allOccurences(int arr[], int key, int i) { 
-    if(i == arr.length) { 
+    public static void allOccurences(int arr[], int key, int start) { 
+    if(start == arr.length) { 
     return; 
     } 
      
-    if(arr[i] == key) { 
-    System.out.print(i+" "); 
+    if(arr[start] == key) { 
+    System.out.print(start+" "); 
     } 
-    allOccurences(arr, key, i+1); 
+    allOccurences(arr, key, start+1); 
     } 
 
 
@@ -32,20 +32,47 @@ public class AssignmentRecursion {
         if(str.length() == 0){
             return 0;
         }
+        
         else{
             return printLength(str.substring(1))+1;
         }
-
     }
 
+    public static int countSubstrs(String str, int start, int end, int n) { 
+        if (n == 1) { 
+        return 1; 
+        } 
+        if (n <= 0) { 
+        return 0; 
+        } 
+         
+         
+        int res = countSubstrs(str, start + 1, end, n - 1) + 
+        countSubstrs(str, start, end- 1, n - 1) - 
+        countSubstrs(str, start + 1, end - 1, n - 2); 
+         
+        if (str.charAt(start) == str.charAt(end)) { 
+        res++; 
+        } 
+        return res;
+   
+        } 
 
     public static void main(String[] args) { 
     // int arr[] = {3, 2, 4, 5, 6, 2, 7, 2, 2}; 
     // int key = 2; 
     // allOccurences(arr, key, 0); 
+
     // System.out.println(); 
-    printDigits(12340);
-    System.out.println(printLength("abcd"));
+
+    // printDigits(12340);
+
+   // System.out.println(printLength("abcd"));
+
+
+        String str = "abcab"; 
+        int n = str.length(); 
+        System.out.print(countSubstrs(str, 0, n-1, n));
     
     } 
     } 
