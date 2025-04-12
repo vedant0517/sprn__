@@ -1,5 +1,5 @@
 
-public class MergeShort{
+public class MergeSort{
     public static void mergeSort(int arr[],int start,int end){
         if(start>=end){
             return;
