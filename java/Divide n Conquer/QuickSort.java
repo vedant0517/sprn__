@@ -31,9 +31,6 @@ public class QuickSort{
          arr[i]=temp;
 
          return i;
-
-      
-
     }
 
     public static void printArr(int arr[]){
