@@ -96,6 +96,51 @@ public class LinkedList {
         return val;
     }
 
+    public int itrSearch(int key){//O(n)
+        Node temp=head;int i=0;
+        while(temp!=null){
+            if(temp.data == key){
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        //key not found
+        return -1;
+    }
+
+    public int helper(Node head,int key){
+        if(head == null){
+            return -1;
+        }
+        if(head.data == key){
+            return 0;
+        }
+        int idx =helper(head.next,key);
+        if(idx == -1){ 
+            return -1;
+        }
+        return idx+1;
+
+
+    }
+    public int recSearch(int key){
+          return helper(head, key);
+
+    }
+
+    public void reverse(){
+        Node prev=null,curr=tail=head,next;
+
+        while(curr != null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        head=prev;
+    }
+
     public void print(){
         if(head==null){
             System.out.println("LL is Empty");
@@ -117,11 +162,13 @@ public class LinkedList {
         ll.addMiddle(2,3);
 
         ll.print(); //1-2-3-4-5
-        ll.removeFirst();
+        // System.out.println(ll.recSearch(3));
+        // System.out.println(ll.recSearch(10));
+        ll.reverse();
         ll.print();
-        ll.removeLast();
-        ll.print();
-        System.out.println(ll.size);
+        
+       
+
         
         
         
