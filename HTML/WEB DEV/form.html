@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Form</title>
+</head>
+<body>
+    <h2><u>Registration form for Compufest 2k25</u></h2>
+    <form action="/action_page.php">
+       <fieldset> 
+        <legend>Personal Details</legend>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="lname">Email:</label>
+        <input type="text" id="e" name="e"><br><br>
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="branch"><br><br>
+        <label for="g">Gender:</label>
+        <label>
+        <input type="radio" name="gender" value="male">
+        Male
+        </label>
+        <label>
+         <input type="radio" name="gender" value="female">
+         Female
+        </label>
+        </fieldset> <br>
+        <label for="comp">Choose Competiton in which you want to participate:</label><br>
+        <select id="comp" name="comp" multiple>
+        <option value="s1">Hackathon</option>
+        <option value="s2">BGMI </option>
+        <option value="s3">Dance</option>
+        <option value="s4">Poster Making</option>
+        </select><br><br>
+        <button type="button" onclick="alert('Succesfuly selected.')">Confirm!</button><br><br>
+        <p>If you are interested in any role select below </p>
+        <input list="pos" name="posi">
+        <datalist id="pos">
+        <option value="Database">
+        <option value="Technical">
+        <option value="Decoration">
+        <option value="EMHM">
+        </datalist>
+         <button type="button" onclick="alert('Succesfuly enrolled.')">Confirm!</button><br><br>
+        <p>Rules and Regulation for Competiton: </p>
+        <textarea name="message" rows="5" cols="30">1.All student have to report sharply at 10 AM.2.Carry all the necessary equipment.3.Maintain discipline</textarea><br>
+        <button type="submit">Submit</button>
+        
+
+
+
+
+
+    </form>
+    
+</body>
+</html>
