@@ -38,7 +38,7 @@ public class Max_Rect_Area {
         }
 
 
-        //Current Area : width=j-i-1= nsr[i]-nsr[i]-1
+        //Current Area : width=j-i-1= nsr[i]-nsl[i]-1
         for(int i=0;i<arr.length;i++){
             int height=arr[i];
             int width=nsr[i]-nsl[i]-1;

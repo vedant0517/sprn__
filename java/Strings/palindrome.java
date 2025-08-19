@@ -1,4 +1,4 @@
-import java.util.*;
+
 // public class palindrome{
 //     public static boolean check(String s1){
 //         for(int i=0;i<s1.length()/2;i++){

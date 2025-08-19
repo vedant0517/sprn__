@@ -35,7 +35,7 @@ public class practice {
             return sb.toString();
     }
     public static void main(String[] args) {
-        String str="hi, i am shradha";
+       // String str="hi, i am shradha";
         String str1="aaabbcccdd";
        // System.out.println(toUpperCase(str));
         System.out.println(compress(str1));
