@@ -134,7 +134,5 @@ public class QueueArray {
             System.out.println(q.peek());
             q.remove();
         }
-
-
     }
 }
