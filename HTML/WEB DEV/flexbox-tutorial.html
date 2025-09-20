@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Flexbox Tutorial</title>
+    <link rel="stylesheet" href="flexbox-styles.css"/>
+</head>
+<body>
+    <header class="hero">
+        <h1>Complete Flexbox Properties Tutorial</h1>
+        <p class="hero-subtitle">Master CSS Flexbox with interactive examples and comprehensive explanations</p>
+        <div class="hero-badges">
+            <span class="badge">CSS3</span>
+            <span class="badge">Flexbox</span>
+            <span class="badge">Responsive</span>
+        </div>
+    </header>
+    
+    <nav class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#basic-flex">Basic Flex Container</a></li>
+            <li><a href="#flex-direction">Flex Direction</a></li>
+            <li><a href="#justify-content">Justify Content</a></li>
+            <li><a href="#align-items">Align Items</a></li>
+            <li><a href="#flex-wrap">Flex Wrap</a></li>
+            <li><a href="#align-content">Align Content</a></li>
+            <li><a href="#flex-items">Flex Item Properties</a></li>
+            <li><a href="#examples">Practical Examples</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 1. Basic Flex Container -->
+    <section id="basic-flex">
+        <h2>1. Basic Flex Container (display: flex)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Adding <code>display: flex</code> to a container makes it a flex container and all direct children become flex items.
+        </div>
+        <div class="basic-flex">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <!-- 2. Flex Direction -->
+    <section id="flex-direction">
+        <h2>2. Flex Direction</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>flex-direction</code> defines the main axis direction. Default is <code>row</code> (horizontal).
+        </div>
+        <h3>Row (default)</h3>
+        <div class="flex-row">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>Column</h3>
+        <div class="flex-column">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>Row Reverse</h3>
+        <div class="flex-row-reverse">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>Column Reverse</h3>
+        <div class="flex-column-reverse">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <!-- 3. Justify Content -->
+    <section id="justify-content">
+        <h2>3. Justify Content (Main Axis Alignment)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>justify-content</code> aligns items along the main axis (horizontal in row direction).
+        </div>
+        
+        <h3>flex-start (default)</h3>
+        <div class="justify-start">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>center</h3>
+        <div class="justify-center">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>flex-end</h3>
+        <div class="justify-end">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>space-between</h3>
+        <div class="justify-between">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>space-around</h3>
+        <div class="justify-around">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>space-evenly</h3>
+        <div class="justify-evenly">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <!-- 4. Align Items -->
+    <section id="align-items">
+        <h2>4. Align Items (Cross Axis Alignment)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>align-items</code> aligns items along the cross axis (vertical in row direction).
+        </div>
+        
+        <h3>stretch (default)</h3>
+        <div class="align-stretch">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>flex-start</h3>
+        <div class="align-start">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>center</h3>
+        <div class="align-center">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>flex-end</h3>
+        <div class="align-end">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        
+        <h3>baseline</h3>
+        <div class="align-baseline">
+            <div class="item baseline-small">Small</div>
+            <div class="item baseline-big">Big</div>
+            <div class="item baseline-medium">Medium</div>
+        </div>
+    </section>
+
+    <!-- 5. Flex Wrap -->
+    <section id="flex-wrap">
+        <h2>5. Flex Wrap</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>flex-wrap</code> controls whether items wrap to new lines when container is too small.
+        </div>
+        
+        <h3>nowrap (default)</h3>
+        <div class="flex-nowrap">
+            <div class="item wide">1</div>
+            <div class="item wide">2</div>
+            <div class="item wide">3</div>
+            <div class="item wide">4</div>
+            <div class="item wide">5</div>
+        </div>
+        
+        <h3>wrap</h3>
+        <div class="flex-wrap">
+            <div class="item wide">1</div>
+            <div class="item wide">2</div>
+            <div class="item wide">3</div>
+            <div class="item wide">4</div>
+            <div class="item wide">5</div>
+        </div>
+        
+        <h3>wrap-reverse</h3>
+        <div class="flex-wrap-reverse">
+            <div class="item wide">1</div>
+            <div class="item wide">2</div>
+            <div class="item wide">3</div>
+            <div class="item wide">4</div>
+            <div class="item wide">5</div>
+        </div>
+    </section>
+
+    <!-- 6. Align Content (for wrapped lines) -->
+    <section id="align-content">
+        <h2>6. Align Content (Multi-line Alignment)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>align-content</code> aligns wrapped lines. Only works with <code>flex-wrap: wrap</code>.
+        </div>
+        
+        <h3>flex-start</h3>
+        <div class="align-content-start">
+            <div class="item wide">1</div>
+            <div class="item wide">2</div>
+            <div class="item wide">3</div>
+            <div class="item wide">4</div>
+            <div class="item wide">5</div>
+        </div>
+        
+        <h3>center</h3>
+        <div class="align-content-center">
+            <div class="item wide">1</div>
+            <div class="item wide">2</div>
+            <div class="item wide">3</div>
+            <div class="item wide">4</div>
+            <div class="item wide">5</div>
+        </div>
+        
+        <h3>space-between</h3>
+        <div class="align-content-between">
+            <div class="item wide">1</div>
+            <div class="item wide">2</div>
+            <div class="item wide">3</div>
+            <div class="item wide">4</div>
+            <div class="item wide">5</div>
+        </div>
+    </section>
+
+    <!-- 7. Flex Item Properties -->
+    <section id="flex-items">
+        <h2>7. Flex Item Properties</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> These properties are applied to individual flex items, not the container.
+        </div>
+        
+        <h3>flex-grow (how much to grow)</h3>
+        <div class="flex-grow-demo">
+            <div class="item grow-1">grow: 1</div>
+            <div class="item grow-2">grow: 2</div>
+            <div class="item grow-1">grow: 1</div>
+        </div>
+        
+        <h3>flex-shrink (how much to shrink)</h3>
+        <div class="flex-shrink-demo">
+            <div class="item shrink-0">shrink: 0 (won't shrink)</div>
+            <div class="item shrink-1">shrink: 1</div>
+            <div class="item shrink-1">shrink: 1</div>
+        </div>
+        
+        <h3>flex-basis (initial size)</h3>
+        <div class="flex-basis-demo">
+            <div class="item basis-100">basis: 100px</div>
+            <div class="item basis-200">basis: 200px</div>
+            <div class="item basis-auto">basis: auto</div>
+        </div>
+        
+        <h3>flex shorthand (grow shrink basis)</h3>
+        <div class="flex-shorthand-demo">
+            <div class="item flex-1">flex: 1</div>
+            <div class="item flex-2">flex: 2</div>
+            <div class="item flex-none">flex: none</div>
+        </div>
+        
+        <h3>align-self (individual alignment)</h3>
+        <div class="align-self-demo">
+            <div class="item self-start">self-start</div>
+            <div class="item self-center">self-center</div>
+            <div class="item self-end">self-end</div>
+            <div class="item self-stretch">self-stretch</div>
+        </div>
+        
+        <h3>order (change visual order)</h3>
+        <div class="order-demo">
+            <div class="item order-3">order: 3 (I'm first in HTML)</div>
+            <div class="item order-1">order: 1 (I'm second in HTML)</div>
+            <div class="item order-2">order: 2 (I'm third in HTML)</div>
+        </div>
+    </section>
+
+    <!-- 8. Practical Examples -->
+    <section id="examples">
+        <h2>8. Practical Examples</h2>
+        <div class="info-box">
+            💡 <strong>Real-world Applications:</strong> See how Flexbox solves common layout challenges.
+        </div>
+        
+        <h3>Perfect Centering</h3>
+        <div class="perfect-center">
+            <div class="item">Perfectly Centered!</div>
+        </div>
+        
+        <h3>Navigation Bar</h3>
+        <nav class="navbar">
+            <div class="logo">Logo</div>
+            <div class="nav-items">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">About</div>
+                <div class="nav-item">Contact</div>
+            </div>
+            <div class="user">Login</div>
+        </nav>
+        
+        <h3>Card Layout</h3>
+        <div class="card-container">
+            <div class="card">
+                <h4>Card 1</h4>
+                <p>This is a flexible card that grows and shrinks.</p>
+            </div>
+            <div class="card">
+                <h4>Card 2</h4>
+                <p>Cards automatically adjust their size.</p>
+            </div>
+            <div class="card">
+                <h4>Card 3</h4>
+                <p>Perfect for responsive layouts.</p>
+            </div>
+        </div>
+        
+        <h3>Sidebar Layout</h3>
+        <div class="sidebar-layout">
+            <aside class="sidebar">Sidebar</aside>
+            <main class="main-content">Main Content Area</main>
+        </div>
+    </section>
+
+    <footer class="tutorial-footer">
+        <div class="footer-content">
+            <h3>🎉 Congratulations!</h3>
+            <p>You've completed the comprehensive Flexbox tutorial. Now you understand all the essential properties for creating flexible, responsive layouts.</p>
+            <div class="footer-links">
+                <a href="#basic-flex" class="footer-link">↑ Back to Top</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" class="footer-link" target="_blank" rel="noopener">MDN Flexbox Guide</a>
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="footer-link" target="_blank" rel="noopener">CSS-Tricks Guide</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

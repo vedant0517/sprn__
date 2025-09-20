@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Grid Tutorial</title>
+    <link rel="stylesheet" href="grid-styles.css"/>
+</head>
+<body>
+    <header class="hero">
+        <h1>Complete CSS Grid Properties Tutorial</h1>
+        <p class="hero-subtitle">Master CSS Grid with interactive examples and comprehensive explanations</p>
+        <div class="hero-badges">
+            <span class="badge">CSS3</span>
+            <span class="badge">Grid Layout</span>
+            <span class="badge">2D Layout</span>
+            <span class="badge">Responsive</span>
+        </div>
+    </header>
+    
+    <nav class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#basic-grid">Basic Grid Container</a></li>
+            <li><a href="#grid-template">Grid Template</a></li>
+            <li><a href="#grid-gaps">Grid Gaps</a></li>
+            <li><a href="#grid-placement">Grid Item Placement</a></li>
+            <li><a href="#grid-areas">Grid Template Areas</a></li>
+            <li><a href="#alignment">Grid Alignment</a></li>
+            <li><a href="#auto-grid">Auto Grid</a></li>
+            <li><a href="#z-index">Z-Index & Layering</a></li>
+            <li><a href="#responsive-grid">Responsive Grid</a></li>
+            <li><a href="#examples">Practical Examples</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 1. Basic Grid Container -->
+    <section id="basic-grid">
+        <h2>1. Basic Grid Container (display: grid)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Adding <code>display: grid</code> creates a grid container. By default, items stack in a single column.
+        </div>
+        
+        <h3>Without Grid</h3>
+        <div class="no-grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        
+        <h3>With Grid (default)</h3>
+        <div class="basic-grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </section>
+
+    <!-- 2. Grid Template Columns and Rows -->
+    <section id="grid-template">
+        <h2>2. Grid Template (Defining Columns & Rows)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>grid-template-columns</code> and <code>grid-template-rows</code> define the size and number of grid tracks.
+        </div>
+        
+        <h3>3 Equal Columns</h3>
+        <div class="grid-3-equal">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+        
+        <h3>Different Column Sizes (px, %, fr)</h3>
+        <div class="grid-mixed-units">
+            <div class="item">100px</div>
+            <div class="item">30%</div>
+            <div class="item">1fr</div>
+            <div class="item">2fr</div>
+        </div>
+        
+        <h3>Repeat Function</h3>
+        <div class="grid-repeat">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        
+        <h3>MinMax Function</h3>
+        <div class="grid-minmax">
+            <div class="item">Min 100px Max 1fr</div>
+            <div class="item">200px fixed</div>
+            <div class="item">Min 150px Max 2fr</div>
+        </div>
+        
+        <h3>Auto-fit and Auto-fill</h3>
+        <div class="grid-auto-fit">
+            <div class="item">Auto-fit 1</div>
+            <div class="item">Auto-fit 2</div>
+            <div class="item">Auto-fit 3</div>
+        </div>
+        
+        <div class="grid-auto-fill">
+            <div class="item">Auto-fill 1</div>
+            <div class="item">Auto-fill 2</div>
+            <div class="item">Auto-fill 3</div>
+        </div>
+    </section>
+
+    <!-- 3. Grid Gaps -->
+    <section id="grid-gaps">
+        <h2>3. Grid Gaps (Spacing Between Items)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>gap</code>, <code>row-gap</code>, and <code>column-gap</code> control spacing between grid items.
+        </div>
+        
+        <h3>No Gap</h3>
+        <div class="grid-no-gap">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        
+        <h3>Equal Gap (20px)</h3>
+        <div class="grid-equal-gap">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        
+        <h3>Different Row and Column Gaps</h3>
+        <div class="grid-different-gaps">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+    </section>
+
+    <!-- 4. Grid Item Placement -->
+    <section id="grid-placement">
+        <h2>4. Grid Item Placement</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Control where items are placed using line numbers, span, or named lines.
+        </div>
+        
+        <h3>Grid Line Numbers</h3>
+        <div class="grid-line-placement">
+            <div class="item placed-item-1">Starts at column 2, spans 2 columns</div>
+            <div class="item placed-item-2">Row 2, Column 1</div>
+            <div class="item placed-item-3">Spans 2 rows</div>
+            <div class="item">Auto-placed</div>
+            <div class="item">Auto-placed</div>
+        </div>
+        
+        <h3>Grid Span</h3>
+        <div class="grid-span-demo">
+            <div class="item span-2-cols">Spans 2 columns</div>
+            <div class="item span-2-rows">Spans 2 rows</div>
+            <div class="item">Normal</div>
+            <div class="item">Normal</div>
+            <div class="item">Normal</div>
+        </div>
+    </section>
+
+    <!-- 5. Grid Template Areas -->
+    <section id="grid-areas">
+        <h2>5. Grid Template Areas (Named Grid Areas)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>grid-template-areas</code> lets you name areas and place items using those names.
+        </div>
+        
+        <div class="grid-areas-demo">
+            <div class="item area-header">Header</div>
+            <div class="item area-sidebar">Sidebar</div>
+            <div class="item area-main">Main Content</div>
+            <div class="item area-footer">Footer</div>
+        </div>
+    </section>
+
+    <!-- 6. Grid Alignment -->
+    <section id="alignment">
+        <h2>6. Grid Alignment</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Align grid items and the entire grid within its container.
+        </div>
+        
+        <h3>Justify Items (horizontal alignment of items)</h3>
+        <div class="grid-justify-start">
+            <div class="item small">Start</div>
+            <div class="item small">Items</div>
+            <div class="item small">Here</div>
+        </div>
+        
+        <div class="grid-justify-center">
+            <div class="item small">Center</div>
+            <div class="item small">Items</div>
+            <div class="item small">Here</div>
+        </div>
+        
+        <div class="grid-justify-end">
+            <div class="item small">End</div>
+            <div class="item small">Items</div>
+            <div class="item small">Here</div>
+        </div>
+        
+        <h3>Align Items (vertical alignment of items)</h3>
+        <div class="grid-align-start">
+            <div class="item small">Start</div>
+            <div class="item small">Items</div>
+            <div class="item small">Here</div>
+        </div>
+        
+        <div class="grid-align-center">
+            <div class="item small">Center</div>
+            <div class="item small">Items</div>
+            <div class="item small">Here</div>
+        </div>
+        
+        <div class="grid-align-end">
+            <div class="item small">End</div>
+            <div class="item small">Items</div>
+            <div class="item small">Here</div>
+        </div>
+        
+        <h3>Justify Content (align entire grid horizontally)</h3>
+        <div class="grid-justify-content-center">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        
+        <h3>Individual Item Alignment</h3>
+        <div class="grid-individual-align">
+            <div class="item justify-self-start">justify-self: start</div>
+            <div class="item justify-self-center">justify-self: center</div>
+            <div class="item align-self-end">align-self: end</div>
+            <div class="item">Default alignment</div>
+        </div>
+    </section>
+
+    <!-- 7. Auto Grid -->
+    <section id="auto-grid">
+        <h2>7. Auto Grid (Implicit Grid)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Control how auto-generated rows/columns behave when items overflow the explicit grid.
+        </div>
+        
+        <h3>Auto Rows</h3>
+        <div class="grid-auto-rows">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7 (auto row)</div>
+            <div class="item">8 (auto row)</div>
+        </div>
+        
+        <h3>Auto Flow Direction</h3>
+        <div class="grid-auto-flow-column">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+
+    <!-- 8. Z-Index & Layering -->
+    <section id="z-index">
+        <h2>8. Z-Index & Layering in CSS Grid</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> <code>z-index</code> controls the stacking order of grid items. Higher values appear in front of lower values.
+        </div>
+        
+        <h3>Basic Z-Index Example</h3>
+        <div class="z-index-basic">
+            <div class="item z-item-1">Z-Index: 1</div>
+            <div class="item z-item-3">Z-Index: 3</div>
+            <div class="item z-item-2">Z-Index: 2</div>
+        </div>
+        
+        <h3>Overlapping Grid Items</h3>
+        <div class="z-index-overlap">
+            <div class="item overlap-item-1">Background Item (z-index: 1)</div>
+            <div class="item overlap-item-2">Middle Item (z-index: 2)</div>
+            <div class="item overlap-item-3">Top Item (z-index: 3)</div>
+        </div>
+        
+        <h3>Negative Z-Index</h3>
+        <div class="z-index-negative">
+            <div class="item negative-bg">Background (z-index: -1)</div>
+            <div class="item negative-normal">Normal Item (z-index: auto)</div>
+            <div class="item negative-front">Front Item (z-index: 1)</div>
+        </div>
+        
+        <h3>Interactive Z-Index (Hover to Change Layers)</h3>
+        <div class="z-index-interactive">
+            <div class="item interactive-item-1">Hover me! (z-index changes)</div>
+            <div class="item interactive-item-2">I change too!</div>
+            <div class="item interactive-item-3">Me three!</div>
+        </div>
+        
+        <h3>Stacking Context with Grid Areas</h3>
+        <div class="z-index-context">
+            <div class="item context-header">Header (z-index: 10)</div>
+            <div class="item context-sidebar">Sidebar (z-index: 2)</div>
+            <div class="item context-main">Main Content (z-index: 1)</div>
+            <div class="item context-overlay">Overlay (z-index: 100)</div>
+            <div class="item context-modal">Modal (z-index: 1000)</div>
+        </div>
+        
+        <h3>Z-Index with Positioned Elements</h3>
+        <div class="z-index-positioned">
+            <div class="item positioned-static">Static Position</div>
+            <div class="item positioned-relative">Relative Position (z-index: 5)</div>
+            <div class="item positioned-absolute">Absolute Position (z-index: 10)</div>
+        </div>
+        
+        <h4>Z-Index Best Practices:</h4>
+        <div class="z-index-tips">
+            <ul>
+                <li>✅ Use consistent z-index scale (1, 10, 100, 1000)</li>
+                <li>✅ Only positioned elements (relative, absolute, fixed) use z-index</li>
+                <li>✅ Grid items automatically create stacking context</li>
+                <li>✅ Higher z-index values appear in front</li>
+                <li>❌ Avoid random large numbers (z-index: 99999)</li>
+                <li>❌ Don't rely on source order for important layering</li>
+                <li>🎯 Use CSS custom properties for consistent z-index values</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 8. Responsive Grid -->
+    <section id="responsive-grid">
+        <h2>9. Responsive Grid Techniques</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Create responsive layouts without media queries using auto-fit, minmax, and fr units.
+        </div>
+        
+        <h3>Responsive Cards (resize browser to see)</h3>
+        <div class="responsive-grid">
+            <div class="item">Card 1</div>
+            <div class="item">Card 2</div>
+            <div class="item">Card 3</div>
+            <div class="item">Card 4</div>
+            <div class="item">Card 5</div>
+            <div class="item">Card 6</div>
+        </div>
+        
+        <h3>Dense Packing</h3>
+        <div class="grid-dense">
+            <div class="item">1</div>
+            <div class="item wide-item">2 (wide)</div>
+            <div class="item">3</div>
+            <div class="item tall-item">4 (tall)</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+        </div>
+    </section>
+
+    <!-- 9. Practical Examples -->
+    <section id="examples">
+        <h2>10. Practical Examples</h2>
+        <div class="info-box">
+            💡 <strong>Real-world Applications:</strong> See how CSS Grid solves common layout challenges.
+        </div>
+        
+        <h3>Holy Grail Layout</h3>
+        <div class="holy-grail">
+            <header class="item hg-header">Header</header>
+            <nav class="item hg-nav">Navigation</nav>
+            <main class="item hg-main">Main Content Area</main>
+            <aside class="item hg-aside">Sidebar</aside>
+            <footer class="item hg-footer">Footer</footer>
+        </div>
+        
+        <h3>Magazine Layout</h3>
+        <div class="magazine-layout">
+            <article class="item magazine-hero">Hero Article</article>
+            <article class="item magazine-feature">Featured Story</article>
+            <article class="item magazine-news">News 1</article>
+            <article class="item magazine-news">News 2</article>
+            <article class="item magazine-news">News 3</article>
+            <article class="item magazine-news">News 4</article>
+            <aside class="item magazine-sidebar">Advertisement</aside>
+        </div>
+        
+        <h3>Dashboard Layout</h3>
+        <div class="dashboard">
+            <div class="item dashboard-header">Dashboard Header</div>
+            <div class="item dashboard-sidebar">Menu</div>
+            <div class="item dashboard-widget">Widget 1</div>
+            <div class="item dashboard-widget">Widget 2</div>
+            <div class="item dashboard-widget">Widget 3</div>
+            <div class="item dashboard-chart">Chart Area</div>
+            <div class="item dashboard-stats">Statistics</div>
+        </div>
+        
+        <h3>Image Gallery with Different Sizes</h3>
+        <div class="gallery">
+            <div class="item gallery-img gallery-large">Large Image</div>
+            <div class="item gallery-img">Image 1</div>
+            <div class="item gallery-img">Image 2</div>
+            <div class="item gallery-img gallery-wide">Wide Image</div>
+            <div class="item gallery-img">Image 3</div>
+            <div class="item gallery-img">Image 4</div>
+            <div class="item gallery-img gallery-tall">Tall Image</div>
+            <div class="item gallery-img">Image 5</div>
+        </div>
+    </section>
+
+    <footer class="tutorial-footer">
+        <div class="footer-content">
+            <h3>🎉 Congratulations!</h3>
+            <p>You've mastered CSS Grid! Now you can create complex, responsive layouts with ease. Grid is perfect for 2D layouts where you need control over both rows and columns.</p>
+            <div class="footer-links">
+                <a href="#basic-grid" class="footer-link">↑ Back to Top</a>
+                <a href="flexbox-tutorial.html" class="footer-link">Flexbox Tutorial</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" class="footer-link" target="_blank" rel="noopener">MDN Grid Guide</a>
+                <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="footer-link" target="_blank" rel="noopener">CSS-Tricks Grid Guide</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Animation Tutorial</title>
+    <link rel="stylesheet" href="animation-styles.css"/>
+</head>
+<body>
+    <header class="hero">
+        <h1>Complete CSS Animation Properties Tutorial</h1>
+        <p class="hero-subtitle">Master CSS Animations with interactive examples and comprehensive explanations</p>
+        <div class="hero-badges">
+            <span class="badge">CSS3</span>
+            <span class="badge">Animations</span>
+            <span class="badge">Keyframes</span>
+            <span class="badge">Transitions</span>
+            <span class="badge">Interactive</span>
+        </div>
+    </header>
+    
+    <nav class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#transitions">CSS Transitions</a></li>
+            <li><a href="#keyframes">CSS Keyframes</a></li>
+            <li><a href="#animation-props">Animation Properties</a></li>
+            <li><a href="#timing-functions">Timing Functions</a></li>
+            <li><a href="#transforms">CSS Transforms</a></li>
+            <li><a href="#advanced">Advanced Techniques</a></li>
+            <li><a href="#performance">Performance Tips</a></li>
+            <li><a href="#examples">Practical Examples</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 1. CSS Transitions -->
+    <section id="transitions">
+        <h2>1. CSS Transitions</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Transitions provide smooth changes between CSS property values over time.
+        </div>
+        
+        <h3>Basic Transition</h3>
+        <div class="demo-container">
+            <div class="transition-basic">Hover me!</div>
+        </div>
+        
+        <h3>Multiple Properties</h3>
+        <div class="demo-container">
+            <div class="transition-multiple">Multiple changes on hover</div>
+        </div>
+        
+        <h3>Different Durations</h3>
+        <div class="demo-container">
+            <div class="transition-fast">Fast (0.2s)</div>
+            <div class="transition-medium">Medium (0.5s)</div>
+            <div class="transition-slow">Slow (1s)</div>
+        </div>
+        
+        <h3>Transition Delays</h3>
+        <div class="demo-container">
+            <div class="transition-delay-1">Delay 0.1s</div>
+            <div class="transition-delay-2">Delay 0.3s</div>
+            <div class="transition-delay-3">Delay 0.5s</div>
+        </div>
+    </section>
+
+    <!-- 2. CSS Keyframes -->
+    <section id="keyframes">
+        <h2>2. CSS Keyframes & @keyframes Rule</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Keyframes define the intermediate steps in an animation sequence.
+        </div>
+        
+        <h3>Basic Keyframe Animation</h3>
+        <div class="demo-container">
+            <div class="keyframe-basic">Moving Box</div>
+        </div>
+        
+        <h3>Multiple Keyframes (0%, 25%, 50%, 75%, 100%)</h3>
+        <div class="demo-container">
+            <div class="keyframe-multiple">Complex Path</div>
+        </div>
+        
+        <h3>Color Animation</h3>
+        <div class="demo-container">
+            <div class="keyframe-color">Color Changing</div>
+        </div>
+        
+        <h3>From/To Syntax</h3>
+        <div class="demo-container">
+            <div class="keyframe-from-to">Fade In/Out</div>
+        </div>
+    </section>
+
+    <!-- 3. Animation Properties -->
+    <section id="animation-props">
+        <h2>3. Animation Properties</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Control how animations behave with various animation properties.
+        </div>
+        
+        <h3>Animation Duration</h3>
+        <div class="demo-container">
+            <div class="duration-1s">1 second</div>
+            <div class="duration-2s">2 seconds</div>
+            <div class="duration-3s">3 seconds</div>
+        </div>
+        
+        <h3>Animation Iteration Count</h3>
+        <div class="demo-container">
+            <div class="iteration-1">Once</div>
+            <div class="iteration-3">3 times</div>
+            <div class="iteration-infinite">Infinite</div>
+        </div>
+        
+        <h3>Animation Direction</h3>
+        <div class="demo-container">
+            <div class="direction-normal">Normal</div>
+            <div class="direction-reverse">Reverse</div>
+            <div class="direction-alternate">Alternate</div>
+            <div class="direction-alternate-reverse">Alternate Reverse</div>
+        </div>
+        
+        <h3>Animation Fill Mode</h3>
+        <div class="demo-container">
+            <div class="fill-none">None</div>
+            <div class="fill-forwards">Forwards</div>
+            <div class="fill-backwards">Backwards</div>
+            <div class="fill-both">Both</div>
+        </div>
+        
+        <h3>Animation Play State</h3>
+        <div class="demo-container">
+            <div class="play-state-demo">Hover to pause</div>
+        </div>
+    </section>
+
+    <!-- 4. Timing Functions -->
+    <section id="timing-functions">
+        <h2>4. Animation Timing Functions</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Timing functions control the acceleration and deceleration of animations.
+        </div>
+        
+        <h3>Built-in Timing Functions</h3>
+        <div class="timing-demo">
+            <div class="timing-linear">linear</div>
+            <div class="timing-ease">ease</div>
+            <div class="timing-ease-in">ease-in</div>
+            <div class="timing-ease-out">ease-out</div>
+            <div class="timing-ease-in-out">ease-in-out</div>
+        </div>
+        
+        <h3>Custom Cubic Bezier</h3>
+        <div class="timing-demo">
+            <div class="timing-bounce">Bounce</div>
+            <div class="timing-elastic">Elastic</div>
+            <div class="timing-spring">Spring</div>
+        </div>
+        
+        <h3>Steps Function</h3>
+        <div class="demo-container">
+            <div class="steps-demo">Steps Animation</div>
+        </div>
+    </section>
+
+    <!-- 5. CSS Transforms -->
+    <section id="transforms">
+        <h2>5. CSS Transforms (Used with Animations)</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Transform functions modify the coordinate space of elements.
+        </div>
+        
+        <h3>2D Transforms</h3>
+        <div class="demo-container">
+            <div class="transform-translate">Translate</div>
+            <div class="transform-rotate">Rotate</div>
+            <div class="transform-scale">Scale</div>
+            <div class="transform-skew">Skew</div>
+        </div>
+        
+        <h3>3D Transforms</h3>
+        <div class="demo-container perspective-container">
+            <div class="transform-3d-rotate">3D Rotate</div>
+            <div class="transform-3d-translate">3D Translate</div>
+            <div class="transform-3d-flip">3D Flip</div>
+        </div>
+        
+        <h3>Transform Origin</h3>
+        <div class="demo-container">
+            <div class="origin-center">Center</div>
+            <div class="origin-top-left">Top Left</div>
+            <div class="origin-bottom-right">Bottom Right</div>
+        </div>
+    </section>
+
+    <!-- 6. Advanced Techniques -->
+    <section id="advanced">
+        <h2>6. Advanced Animation Techniques</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Combine multiple techniques for complex, professional animations.
+        </div>
+        
+        <h3>Chained Animations</h3>
+        <div class="demo-container">
+            <div class="chain-1">Step 1</div>
+            <div class="chain-2">Step 2</div>
+            <div class="chain-3">Step 3</div>
+        </div>
+        
+        <h3>Staggered Animations</h3>
+        <div class="stagger-container">
+            <div class="stagger-item">1</div>
+            <div class="stagger-item">2</div>
+            <div class="stagger-item">3</div>
+            <div class="stagger-item">4</div>
+            <div class="stagger-item">5</div>
+        </div>
+        
+        <h3>Animation with Pseudo-elements</h3>
+        <div class="demo-container">
+            <div class="pseudo-animation">Hover for magic!</div>
+        </div>
+        
+        <h3>SVG Path Animation</h3>
+        <div class="demo-container">
+            <svg class="svg-demo" viewBox="0 0 200 200">
+                <path class="animated-path" d="M 10 80 Q 95 10 180 80" stroke="#3498db" stroke-width="3" fill="none"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 7. Performance Tips -->
+    <section id="performance">
+        <h2>7. Animation Performance Tips</h2>
+        <div class="info-box">
+            💡 <strong>Key Concept:</strong> Use hardware acceleration and best practices for smooth animations.
+        </div>
+        
+        <h3>Hardware Accelerated Properties</h3>
+        <div class="perf-demo">
+            <div class="perf-good">✅ Transform (GPU)</div>
+            <div class="perf-bad">❌ Left/Top (CPU)</div>
+        </div>
+        
+        <h3>Will-Change Property</h3>
+        <div class="demo-container">
+            <div class="will-change-demo">Optimized Animation</div>
+        </div>
+        
+        <div class="performance-tips">
+            <h4>Performance Best Practices:</h4>
+            <ul>
+                <li>✅ Use <code>transform</code> and <code>opacity</code> for animations</li>
+                <li>✅ Add <code>will-change</code> property for complex animations</li>
+                <li>✅ Use <code>transform3d()</code> to trigger hardware acceleration</li>
+                <li>❌ Avoid animating layout properties (width, height, padding)</li>
+                <li>❌ Don't animate too many elements simultaneously</li>
+                <li>🎯 Target 60fps (16.67ms per frame)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 8. Practical Examples -->
+    <section id="examples">
+        <h2>8. Practical Animation Examples</h2>
+        <div class="info-box">
+            💡 <strong>Real-world Applications:</strong> Professional animation patterns you can use in projects.
+        </div>
+        
+        <h3>Loading Spinners</h3>
+        <div class="demo-container">
+            <div class="spinner-1"></div>
+            <div class="spinner-2"></div>
+            <div class="spinner-3"></div>
+        </div>
+        
+        <h3>Button Animations</h3>
+        <div class="demo-container">
+            <button class="btn-bounce">Bounce</button>
+            <button class="btn-slide">Slide</button>
+            <button class="btn-glow">Glow</button>
+        </div>
+        
+        <h3>Card Hover Effects</h3>
+        <div class="cards-container">
+            <div class="card-flip">
+                <div class="card-front">Front</div>
+                <div class="card-back">Back</div>
+            </div>
+            <div class="card-lift">Lift Effect</div>
+            <div class="card-zoom">Zoom Effect</div>
+        </div>
+        
+        <h3>Text Animations</h3>
+        <div class="demo-container">
+            <div class="text-typewriter">Typewriter effect...</div>
+            <div class="text-glitch">Glitch Effect</div>
+            <div class="text-wave">
+                <span>W</span><span>a</span><span>v</span><span>e</span>
+                <span>&nbsp;</span>
+                <span>E</span><span>f</span><span>f</span><span>e</span><span>c</span><span>t</span>
+            </div>
+        </div>
+        
+        <h3>Navigation Animations</h3>
+        <nav class="animated-nav">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">About</div>
+            <div class="nav-item">Services</div>
+            <div class="nav-item">Contact</div>
+            <div class="nav-indicator"></div>
+        </nav>
+        
+        <h3>Scroll-triggered Animation Preview</h3>
+        <div class="scroll-demo">
+            <div class="scroll-item">Fade In</div>
+            <div class="scroll-item">Slide Left</div>
+            <div class="scroll-item">Slide Right</div>
+            <div class="scroll-item">Scale Up</div>
+        </div>
+    </section>
+
+    <footer class="tutorial-footer">
+        <div class="footer-content">
+            <h3>🎉 Animation Master!</h3>
+            <p>You've learned the complete CSS Animation toolkit! These techniques will bring life and interactivity to your web projects.</p>
+            <div class="footer-links">
+                <a href="#transitions" class="footer-link">↑ Back to Top</a>
+                <a href="flexbox-tutorial.html" class="footer-link">Flexbox Tutorial</a>
+                <a href="grid-tutorial.html" class="footer-link">Grid Tutorial</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations" class="footer-link" target="_blank" rel="noopener">MDN Animations</a>
+                <a href="https://animate.style/" class="footer-link" target="_blank" rel="noopener">Animate.css Library</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
