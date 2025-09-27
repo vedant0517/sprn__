@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - CRUD Operations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+                <p>Manage your favorite cities and get real-time weather updates</p>
+                <div id="apiKeyNotice" class="api-notice hidden">
+                    <i class="fas fa-info-circle"></i>
+                    <span>To see live weather data, get your free API key from <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeather</a> and add it to your .env file</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add City Form -->
+        <section class="add-city-section">
+            <div class="form-container">
+                <h2><i class="fas fa-plus-circle"></i> Add New City</h2>
+                <form id="addCityForm" class="city-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="cityInput" 
+                            placeholder="Enter city name (e.g., London, Tokyo, New York)"
+                            required
+                            autocomplete="off"
+                        >
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add City
+                        </button>
+                    </div>
+                    <div id="formError" class="error-message"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Export Section -->
+        <section class="export-section">
+            <div class="export-container">
+                <h3><i class="fas fa-download"></i> Export Data</h3>
+                <div class="export-buttons">
+                    <button id="exportXmlBtn" class="btn btn-secondary">
+                        <i class="fas fa-file-code"></i> Export as XML
+                    </button>
+                    <button id="exportJsonBtn" class="btn btn-secondary">
+                        <i class="fas fa-file-alt"></i> Export as JSON
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cities List -->
+        <section class="cities-section">
+            <div class="cities-header">
+                <h2><i class="fas fa-list"></i> Your Cities</h2>
+                <div class="cities-count">
+                    <span id="cityCount">0</span> cities saved
+                </div>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <i class="fas fa-cloud-rain"></i>
+                <h3>No cities added yet</h3>
+                <p>Add your first city to get started with weather tracking</p>
+            </div>
+
+            <!-- Cities Grid -->
+            <div id="citiesGrid" class="cities-grid">
+                <!-- Weather cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-edit"></i> Edit City</h3>
+                    <button id="closeModal" class="close-btn" title="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form id="editCityForm" class="city-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="editCityInput" 
+                            placeholder="Enter new city name"
+                            required
+                            autocomplete="off"
+                        >
+                    </div>
+                    <div id="editFormError" class="error-message"></div>
+                    <div class="modal-actions">
+                        <button type="button" id="cancelEdit" class="btn btn-secondary">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Confirm Delete</h3>
+                    <button id="closeDeleteModal" class="close-btn" title="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete <strong id="deleteCityName"></strong>?</p>
+                    <p class="warning-text">This action cannot be undone.</p>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="cancelDelete" class="btn btn-secondary">
+                        Cancel
+                    </button>
+                    <button type="button" id="confirmDelete" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Delete City
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toastContainer" class="toast-container">
+            <!-- Toast messages will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Weather App. Built with ❤️ using Node.js, Express, and OpenWeather API</p>
+            <div class="footer-links">
+                <a href="https://openweathermap.org/" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Weather Data by OpenWeather
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
