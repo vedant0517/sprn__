@@ -35,13 +35,24 @@ app.get('/test', (req, res) => {
     });
 });
 
-// Error handling middleware
+// Error handling middleware with detailed logging
 app.use((error, req, res, next) => {
-    console.error('Error:', error);
+    const timestamp = new Date().toISOString();
+    const errorLog = {
+        timestamp,
+        method: req.method,
+        url: req.url,
+        error: error.message,
+        stack: error.stack,
+        ip: req.ip
+    };
+    
+    console.error('Server Error:', JSON.stringify(errorLog, null, 2));
+    
     res.status(500).json({ 
         success: false, 
         message: 'Internal server error',
-        error: error.message 
+        error: process.env.NODE_ENV === 'development' ? error.message : 'Something went wrong'
     });
 });
 

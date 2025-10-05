@@ -722,6 +722,9 @@ function initApp() {
     console.log('🌤️ Weather App initialized');
     console.log('📡 Fetching cities...');
     
+    // Add keyboard event listeners
+    setupKeyboardHandlers();
+    
     // Load cities on page load
     fetchCities();
     
@@ -732,6 +735,39 @@ function initApp() {
             fetchCities();
         }
     }, 10 * 60 * 1000);
+}
+
+/**
+ * Set up keyboard event handlers for better UX
+ */
+function setupKeyboardHandlers() {
+    document.addEventListener('keydown', (event) => {
+        // Close modals with Escape key
+        if (event.key === 'Escape') {
+            const editModal = document.getElementById('editModal');
+            const deleteModal = document.getElementById('deleteModal');
+            
+            if (editModal && editModal.style.display === 'flex') {
+                editModal.style.display = 'none';
+            }
+            if (deleteModal && deleteModal.style.display === 'flex') {
+                deleteModal.style.display = 'none';
+            }
+        }
+        
+        // Handle Enter key in input fields
+        if (event.key === 'Enter' && event.target.tagName === 'INPUT') {
+            if (event.target.id === 'cityInput') {
+                const addButton = document.querySelector('.add-city-btn');
+                if (addButton) addButton.click();
+            } else if (event.target.id === 'editCityName') {
+                const updateButton = document.querySelector('.modal-btn.primary');
+                if (updateButton && updateButton.textContent === 'Update') {
+                    updateButton.click();
+                }
+            }
+        }
+    });
 }
 
 // ===== GLOBAL FUNCTIONS (called from HTML) =====

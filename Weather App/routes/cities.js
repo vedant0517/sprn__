@@ -13,13 +13,34 @@ const isApiKeyConfigured = () => {
     return OPENWEATHER_API_KEY && OPENWEATHER_API_KEY !== 'your_api_key_here' && OPENWEATHER_API_KEY.length > 10;
 };
 
-// Helper function to read cities from JSON file
+// Helper function to read cities from JSON file with validation
 async function readCitiesFromFile() {
     try {
         const data = await fs.readFile(CITIES_FILE, 'utf8');
-        return JSON.parse(data);
+        const parsedCities = JSON.parse(data);
+        
+        // Validate data structure
+        if (!Array.isArray(parsedCities)) {
+            console.warn('Invalid cities data format, resetting to empty array');
+            return [];
+        }
+        
+        // Validate each city object
+        const validCities = parsedCities.filter(city => {
+            return city && typeof city === 'object' && city.id && city.name;
+        });
+        
+        if (validCities.length !== parsedCities.length) {
+            console.warn(`Filtered ${parsedCities.length - validCities.length} invalid city entries`);
+        }
+        
+        return validCities;
     } catch (error) {
-        console.error('Error reading cities file:', error);
+        if (error.code === 'ENOENT') {
+            console.log('No cities file found, creating empty array');
+        } else {
+            console.error('Error reading cities file:', error.message);
+        }
         return [];
     }
 }

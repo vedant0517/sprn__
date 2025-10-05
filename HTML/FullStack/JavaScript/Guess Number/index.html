@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎯 Guess The Number!</h1>
+        
+        <div class="setup-section" id="setupSection">
+            <p>Enter the maximum number for your guessing range:</p>
+            <input type="number" id="maxInput" placeholder="Enter max number" min="2" value="100">
+            <button onclick="startNewGame()">Start Game</button>
+        </div>
+        
+        <div class="game-section hidden" id="gameSection">
+            <div class="game-info">
+                <p id="rangeInfo">Guess a number between 1 and 100</p>
+                <p id="attemptInfo">Attempts: 0</p>
+            </div>
+            
+            <div class="input-section">
+                <input type="number" id="guessInput" placeholder="Enter your guess">
+                <button onclick="makeGuess()">Guess!</button>
+                <button onclick="quitGame()" class="quit-btn">Quit</button>
+            </div>
+            
+            <div id="feedback" class="feedback"></div>
+            
+            <div class="history-section">
+                <h3>Your Guesses:</h3>
+                <div id="guessHistory" class="guess-history"></div>
+            </div>
+            
+            <button onclick="startNewGame()" class="new-game-btn hidden" id="newGameBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
