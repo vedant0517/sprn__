@@ -116,6 +116,20 @@ NODE_ENV=development
 3. Generate an API key
 4. Add it to your `.env` file
 
+## 🧪 Testing
+
+The project includes comprehensive testing:
+
+```bash
+# Run unit tests (no server required)
+npm test
+
+# Run API integration tests (server must be running)
+npm run test:api
+```
+
+See [TESTING.md](TESTING.md) for detailed testing information.
+
 ## 📚 API Documentation
 
 ### Cities Endpoints

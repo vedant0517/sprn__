@@ -476,12 +476,39 @@ function renderCities() {
 }
 
 /**
+ * Get temperature class based on temperature value
+ */
+function getTemperatureClass(temperature) {
+    if (temperature >= 35) return 'hot';
+    if (temperature >= 25) return 'warm';
+    if (temperature >= 10) return 'mild';
+    if (temperature >= 0) return 'cold';
+    return 'freezing';
+}
+
+/**
+ * Get weather card theme based on weather conditions
+ */
+function getWeatherCardTheme(weather) {
+    if (!weather || !weather.icon) return '';
+    
+    const icon = weather.icon;
+    if (icon.includes('01') || icon.includes('02')) return 'sunny';
+    if (icon.includes('03') || icon.includes('04')) return 'cloudy';
+    if (icon.includes('09') || icon.includes('10') || icon.includes('11')) return 'rainy';
+    if (icon.includes('13')) return 'snowy';
+    return '';
+}
+
+/**
  * Create HTML for a single city card
  */
 function createCityCard(city) {
     const hasWeather = city.weather && !city.weatherError;
     const weatherIcon = hasWeather ? WEATHER_ICONS[city.weather.icon] || '🌤️' : '❌';
-    const cardClass = hasWeather ? 'weather-card' : 'weather-card error';
+    const temperatureClass = hasWeather ? getTemperatureClass(city.weather.temperature) : '';
+    const weatherTheme = hasWeather ? getWeatherCardTheme(city.weather) : '';
+    const cardClass = `weather-card ${hasWeather ? weatherTheme : 'error'}`;
     
     return `
         <div class="${cardClass}" data-city-id="${city.id}">
@@ -518,7 +545,7 @@ function createCityCard(city) {
             ${hasWeather ? `
                 <div class="weather-main">
                     <div class="weather-icon">${weatherIcon}</div>
-                    <div class="temperature">${city.weather.temperature}</div>
+                    <div class="temperature ${temperatureClass}">${city.weather.temperature}</div>
                 </div>
                 
                 <div class="weather-details">
