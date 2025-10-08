@@ -14,7 +14,7 @@ public class BinaryTreeB{
     }
 
     static class BinaryTree{
-        static int idx =-1;
+        static int idx =-1;     //staic bcoz in every levl idx should increment
         public static Node buildTree(int nodes[]){
             idx++;
             if(nodes[idx]==-1 || idx>=nodes.length)  return null;
@@ -64,7 +64,7 @@ public class BinaryTreeB{
             //O(n)
             if(root == null) return;
             
-            Queue<Node> queue = new LinkedList<>();
+            Queue <Node> queue = new LinkedList<>();  //use queue when want to use BFS
             queue.add(root);
             queue.add(null); // Level separator
             
