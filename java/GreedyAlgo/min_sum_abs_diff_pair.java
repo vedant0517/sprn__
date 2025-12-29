@@ -1,5 +1,5 @@
 import java.util.*;
-public class min_abs_diff_pair {
+public class min_sum_abs_diff_pair {
     public static void main(String[] args) { //O(nlogn)
         int a[]={4,1,8,7};
         int b[]={2,3,6,5};
