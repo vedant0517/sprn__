@@ -13,7 +13,7 @@ public class BinaryTreeB{
         }
     }
 
-    static class BinaryTree{
+    static class BinaryTree {
         static int idx =-1;     //staic bcoz in every levl idx should increment
         public static Node buildTree(int nodes[]){
             idx++;
@@ -142,6 +142,30 @@ public class BinaryTreeB{
             return Math.max(selfDiameter, Math.max(leftDiameter, rightDiameter));
         }
 
+
+        static class Info{
+            int dia,ht;
+
+            public Info(int d,int h){
+                this.dia=d;
+                this.ht=h;
+            }
+        }
+        public static Info diameter2(Node root){
+            if(root==null){
+                return new Info(0, 0);
+                
+            }
+            Info left=diameter2(root.left);
+            Info right=diameter2(root.right);
+
+            int dia=Math.max(Math.max(left.dia, right.dia) , left.ht + right.ht + 1);
+            int ht=Math.max(left.ht,right.ht)+1;
+
+            return new Info(dia,ht);
+           
+        }
+
         
     }
     public static void main(String[] args) {
@@ -179,7 +203,8 @@ public class BinaryTreeB{
         System.out.println("Height of tree: " + BinaryTree.height(root));
         System.out.println("Total nodes: " + BinaryTree.countNodes(root));
         System.out.println("Sum of all nodes: " + BinaryTree.sumOfNodes(root));
-        System.out.println("Diameter of tree: " + BinaryTree.diameter(root));
+        System.out.println("Diameter of tree(Aproch 1): " + BinaryTree.diameter(root));
+        System.out.println("Diameter of tree(Aproch 2): " + BinaryTree.diameter2(root).dia);
         
         System.out.println("\n=== Method 2: Manual tree construction ===");
         // Method 2: Manual construction
