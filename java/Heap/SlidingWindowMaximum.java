@@ -18,8 +18,6 @@ public class SlidingWindowMaximum {
             //descending
             return p2.val-this.val;
         }
-
-
     }
 
     public static void main(String[] args) {
