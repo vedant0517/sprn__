@@ -1,0 +1,19 @@
+{
+  "name": "mern_shopping_list",
+  "version": "1.0.0",
+  "description": "shoping list built with MERN",
+  "license": "MIT",
+  "author": "vedant",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "echo \"node server.js",
+    "server":"nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "concurrently": "^9.2.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2"
+  }
+}
