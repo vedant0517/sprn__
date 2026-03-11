@@ -4,7 +4,6 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.LinkedList;
 
-import org.w3c.dom.Node;
 public class HashMapCode {
     static class HashMap<K,V>{ //generic
         private class Node{
