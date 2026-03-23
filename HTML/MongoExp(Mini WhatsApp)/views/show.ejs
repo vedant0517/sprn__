@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="layout">
+        <header class="hero">
+            <h3>Chat Details</h3>
+            <p class="meta">From <span><%= chat.from %></span> to <span><%= chat.to %></span></p>
+            <p class="timestamp">Chat ID: <%= chat._id %></p>
+        </header>
+
+        <article class="chat">
+            <div class="msg">
+                <p><%= chat.msg %></p>
+            </div>
+            <p class="timestamp">Created: <%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %> &mdash; <%= chat.created_at.toString().split(" ")[4] %></p>
+            <p class="timestamp">Last updated: <%= (chat.updated_at || chat.created_at).toString().split(" ").slice(0,4).join(" ") %> &mdash; <%= (chat.updated_at || chat.created_at).toString().split(" ")[4] %></p>
+            <div class="chat-actions" style="margin-top:12px;">
+                <form method="GET" action="/chats">
+                    <button type="submit" class="action-btn">Back</button>
+                </form>
+                <form method="GET" action="/chats/<%=chat._id %>/edit">
+                    <button type="submit" class="action-btn">Edit</button>
+                </form>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

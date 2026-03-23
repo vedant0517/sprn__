@@ -23,6 +23,9 @@
                 <p><%= chat.msg %></p>
             </div>
             <div class="chat-actions">
+                <form method="GET" action="/chats/<%=chat._id %>">
+                    <button type="submit" class="action-btn">Show</button>
+                </form>
                 <form method="GET" action="/chats/<%=chat._id %>/edit">
                     <button type="submit" class="action-btn">Edit</button>
                 </form>
